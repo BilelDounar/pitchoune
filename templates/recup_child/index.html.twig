@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}RecupChild index
-{% endblock %}
+{% block title %}RecupChild index{% endblock %}
 
 {% block body %}
 
@@ -32,8 +31,8 @@
 									{{ recup_child.firstName }}</p>
 
 								<div class="btn">
-									<a class="edit" href="{{ path('app_recup_child_edit', {'id': recup_child.id}) }}">editer</a>
-									<a class="sup" href="{{ path('app_recup_child_sup', {'id': recup_child.id}) }}">supprimer</a>
+									<a class="edit" href="{{ path('app_recup_child_edit', {'id': recup_child.id}) }}">Éditer</a>
+									<a class="sup" href="{{ path('app_recup_child_sup', {'id': recup_child.id}) }}">Supprimer</a>
 
 								</div>
 							</div>
@@ -48,7 +47,7 @@
 				{% endif %}
 			</div>
 			<div class="img">
-				<a href="{{ path('app_user') }}"><img class="back" src="{{ asset('asset/img/back.svg') }}" alt="back"></a>
+				<a href="{{ path('app_user') }}"><img class="back" src="{{ asset('asset/img/back.svg') }}" alt="Retour"></a>
 			</div>
 		</div>
 	</section>

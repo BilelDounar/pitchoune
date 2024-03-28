@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register
-{% endblock %}
+{% block title %}Register{% endblock %}
 
 {% block body %}
 
@@ -9,32 +8,31 @@
 		<div class="wrap">
 			<div class="top">
 				<h1>Inscription</h1>
-				<p>Vous devez vous inscrire pour continuer
-				</p>
+				<p>Vous devez vous inscrire pour continuer.</p>
 			</div>
 			<div class="down">
 
 
 				{{ form_start(registrationForm, {attr: {'novalidate': 'novalidate'}}) }}
 
-				{{ form_label(registrationForm.roless, 'Choix du role :') }}
-				{{ form_widget(registrationForm.roless, {
-    'attr': {'class': 'form-control', }
-}) }}
+				{{ form_label(registrationForm.roles, 'Choix du rôle :') }}
+				{{ form_widget(registrationForm.roles, {
+					'attr': {'class': 'form-control'}
+				}) }}
 
 				<div class="a">
 
 					<div class="nom">
 						{{ form_widget(registrationForm.nom, {
-                    'attr': {'placeholder': 'Nom'}
-                }) }}
+							'attr': {'placeholder': 'Nom'}
+						}) }}
 						{{ form_errors(registrationForm.nom) }}
 
 					</div>
 					<div class="prenom">
 						{{ form_widget(registrationForm.prenom, {
-                    'attr': {'placeholder': 'Prénom'}
-                }) }}
+							'attr': {'placeholder': 'Prénom'}
+						}) }}
 						{{ form_errors(registrationForm.prenom) }}
 					</div>
 				</div>
@@ -43,16 +41,16 @@
 					<div class="adresse">
 
 						{{ form_widget(registrationForm.adresse, {
-    'attr': {'placeholder': 'Adresse'}
-}) }}
+							'attr': {'placeholder': 'Adresse'}
+						}) }}
 						{{ form_errors(registrationForm.adresse) }}
 
 
 					</div>
 					<div class="ZIP">
 						{{ form_widget(registrationForm.ZIP, {
-                    'attr': {'placeholder': 'Code Postal'}
-                }) }}
+							'attr': {'placeholder': 'Code Postal'}
+						}) }}
 						{{ form_errors(registrationForm.ZIP) }}
 					</div>
 				</div>
@@ -60,9 +58,8 @@
 				<div class="email">
 
 					{{ form_widget(registrationForm.email, {
-                    'attr': {'placeholder': 'Email'}
-					
-                }) }}
+						'attr': {'placeholder': 'Email'}
+					}) }}
 
 					{{ form_errors(registrationForm.email) }}
 				</div>
@@ -70,16 +67,16 @@
 				<div class="pass">
 
 					{{ form_widget(registrationForm.plainPassword, {
-                    'attr': {'placeholder': 'Mot de passe'},
-                }) }}
+						'attr': {'placeholder': 'Mot de passe'}
+					}) }}
 					{{ form_errors(registrationForm.plainPassword) }}
 				</div>
 
 				<div class="condition">
 					{{ form_label(registrationForm.agreeTerms, 'Accepter les conditions') }}
 					{{ form_widget(registrationForm.agreeTerms, {
-    'attr': {'class': 'form-control', 'placeholder': 'Accepter les conditions'}
-}) }}
+						'attr': {'class': 'form-control', 'placeholder': 'Accepter les conditions'}
+					}) }}
 				</div>
 				{{ form_errors(registrationForm.agreeTerms) }}
 

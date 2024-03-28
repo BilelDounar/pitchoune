@@ -1,8 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Dashboard - Pitchoune
-
-{% endblock %}
+{% block title %}Dashboard - Pitchoune{% endblock %}
 
 {% block body %}
 
@@ -10,24 +8,23 @@
 		<div class="wrap">
 			<div class="link">
 				<div class="top">
-						<a href="{{ path('app_add_creche_show', {'id': creche.id }) }}">Détail creche</a>
-						<a href="{{ path('app_contact_creche_index') }}">Voir mes message</a>
-					</div>
-						<div class="down">
-						<a href="{{ path('app_pro_liste_child') }}">Gérer les enfants</a>
-						<a  href="{{ path('app_pro_time_new') }}">Horaire</a>
-					</div>
+					<a href="{{ path('app_add_creche_show', {'id': creche.id }) }}">Détail crèche</a>
+					<a href="{{ path('app_contact_creche_index') }}">Voir mes messages</a>
+				</div>
+				<div class="down">
+					<a href="{{ path('app_pro_liste_child') }}">Gérer les enfants</a>
+					<a href="{{ path('app_pro_time_new') }}">Horaires</a>
+				</div>
 			</div>
 			<div class="creneaux">
-			<h2>Vos créneaux :</h2>
+				<h2>Vos créneaux :</h2>
 			</div>
 			<div class="box_dash">
 
 				{% for rdv in rdvs %}
 					<div class="message-box">
 						<div class="top">
-							<p>{{ rdv.date ? rdv.date|date('d/m/Y') : '' }}</p> 
-							
+							<p>{{ rdv.date ? rdv.date|date('d/m/Y') : '' }}</p>
 						</div>
 						<div class="bot detail">
 							<div class="letter">
@@ -38,17 +35,15 @@
 									<div class="titre">
 										<h2>{{ childs[rdv.id].prenom }} {{ childs[rdv.id].nom }}</h2>
 									</div>
-										<p><b>Heure début:</b> {{ rdv.heure_debut ? rdv.heure_debut|date('H\\hi') : '' }} </p>
-										<p><b>Heure fin:</b> {{ rdv.heure_fin ? rdv.heure_fin|date('H\\hi') : '' }} </p>	
+									<p><b>Heure début :</b> {{ rdv.heure_debut ? rdv.heure_debut|date('H\\hi') : '' }} </p>
+									<p><b>Heure fin :</b> {{ rdv.heure_fin ? rdv.heure_fin|date('H\\hi') : '' }} </p>
 								</div>
 							</div>
 						</div>
-
 					</div>
-
 				{% else %}
 					<tr>
-						<td colspan="14">Aucun créneaux trouvé.</td>
+						<td colspan="14">Aucun créneau trouvé.</td>
 					</tr>
 				{% endfor %}
 
@@ -59,5 +54,5 @@
 			</div>
 		</div>
 	</section>
-	
+
 {% endblock %}

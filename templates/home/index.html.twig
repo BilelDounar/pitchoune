@@ -8,67 +8,67 @@
     <p>Email: {{ app.user.email }}</p>
     {% endif %} #}
 
-<section id="intro">
-    <div class="wrap">
-        <div class="intro_text">
-            <h1>Votre <span class="text_intro_1">premier</span> choix en garde d'enfants!</h1>
-            <p>Optez pour l'excellence avec notre service de garde d'enfants ! <br>
-            Nous mettons votre enfant au premier plan, offrant un environnement sécurisé et enrichissant pour son développement.</p>
+    <section id="intro">
+        <div class="wrap">
+            <div class="intro_text">
+                <h1>Votre <span class="text_intro_1">premier</span> choix en garde d'enfants !</h1>
+                <p>Optez pour l'excellence avec notre service de garde d'enfants ! <br>
+                    Nous mettons votre enfant au premier plan, offrant un environnement sécurisé et enrichissant pour son développement.</p>
+            </div>
+            <div class="intro_button">
+                <a class="button" href="">Nos Services</a>
+                <a class="button" href="">Commencer</a>
+            </div>
         </div>
-        <div class="intro_button">
-            <a class="button" href="">Nos Services</a>
-            <a class="button" href="">Commencer</a>
+    </section>
+    <section id="banner">
+        <div class="wrap">
+            <i class="fa-solid fa-lock"></i>
+            <h2>Sécurité et services garantis</h2>
+            <a class="button" href="">En savoir plus</a>
         </div>
-    </div>
-</section>
-<section id="banner">
-    <div class="wrap">
-        <i class="fa-solid fa-lock"></i>
-        <h2>Sécurité et services garantie</h2>
-        <a class="button" href="">En savoir plus</a>
-    </div>
-</section>
-<section id="services">
-    <div class="wrap">
-        <img src="{{ asset('asset/img/main_img_1.png') }}" alt="exemple 1">
-        <img src="{{ asset('asset/img/main_img_2.png') }}" alt="exemple 2">
-        <img src="{{ asset('asset/img/main_img_3.png') }}" alt="exemple 3">
-    </div>
-</section>
+    </section>
+    <section id="services">
+        <div class="wrap">
+            <img src="{{ asset('asset/img/main_img_1.png') }}" alt="exemple 1">
+            <img src="{{ asset('asset/img/main_img_2.png') }}" alt="exemple 2">
+            <img src="{{ asset('asset/img/main_img_3.png') }}" alt="exemple 3">
+        </div>
+    </section>
 
-<hr class="hr_separator">
+    <hr class="hr_separator">
 
-<section id="stats">
-    <div class="wrap">
-        <div class="stat">
-            <span>+ de 5000</span>
-            <h4>Parents approuve et recommande</h4>
+    <section id="stats">
+        <div class="wrap">
+            <div class="stat">
+                <span>+ de 5000</span>
+                <h4>Parents approuvent et recommandent</h4>
+            </div>
+            <hr class="separator_stat">
+            <div class="stat">
+                <span>+ de 300</span>
+                <h4>Organismes partenaires</h4>
+            </div>
+            <hr class="separator_stat">
+            <div class="stat">
+                <span>200</span>
+                <h4>Partenaires en France</h4>
+            </div>
+            <hr class="separator_stat">
+            <div class="stat">
+                <span>0</span>
+                <h4>Problèmes</h4>
+            </div>
         </div>
-        <hr class="separator_stat">
-        <div class="stat">
-            <span>+ de 300</span>
-            <h4>Oragnisme partenaires</h4>
-        </div>
-        <hr class="separator_stat">
-        <div class="stat">
-            <span>200</span>
-            <h4>Partenaires en France</h4>
-        </div>
-        <hr class="separator_stat">
-        <div class="stat">
-            <span>0</span>
-            <h4>Probleme</h4>
-        </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <div class="wrap">
-        <a class="logo" href="{{ path('app') }}"><img class="logo" src="{{ asset('asset/img/logo_white.png') }}" alt="Logo"></a>
-        <hr class="separator">
-        <span>Tous droits réservé. Pitchoune 2024 &copy</span>
-    </div>
-</footer>
+    <footer>
+        <div class="wrap">
+            <a class="logo" href="{{ path('app') }}"><img class="logo" src="{{ asset('asset/img/logo_white.png') }}" alt="Logo"></a>
+            <hr class="separator">
+            <span>Tous droits réservés. Pitchoune 2024 &copy;</span>
+        </div>
+    </footer>
 
 
 {% endblock %}
